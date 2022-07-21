@@ -7,25 +7,12 @@ body {
     margin: 5;
 }
 
-/* remove spin buttons in input */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 .grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     border: 2px solid;
     border-color: blue;
-    width: fit-content;
+    max-width: 500px;
     margin: auto;
     background-color: rgb(102, 163, 145);
     padding: 0px;
@@ -35,7 +22,6 @@ input[type=number] {
 .grid>div {
     display: flex;
     flex-direction: row;
-    padding: 0;
     width: 100%;
 }
 
@@ -45,7 +31,7 @@ input[type=number] {
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 2.5px;
     margin: 5px;
-    width: 100%;
+    width: fit-content;
 }
 
 .box>input {
@@ -55,7 +41,5 @@ input[type=number] {
     border: 1px solid;
     width: 95%;
     font-size: x-large;
-    font-weight: 1000;
-    padding: 0px;
-    margin: 0px;
+    font-weight: bold;
 }
