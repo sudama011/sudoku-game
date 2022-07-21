@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(117, 117, 217);
+    margin: 8;
+}
+
+/* remove spin buttons in input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 2px solid;
+    border-color: blue;
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(102, 163, 145);
+    padding: 5px;
+}
+
+.grid>div {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2.5px;
+    margin: 5px;
+    width: 100%;
+}
+
+.box>input {
+    cursor: pointer;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 1px solid;
+    width: 95%;
+    font-size: 30px;
+    padding: 1px;
+    margin: 0px;
+}
