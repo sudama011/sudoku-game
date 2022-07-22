@@ -78,10 +78,7 @@
                 <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');" />
                 <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,'');" />
 
-
             </div>
-
-
 
             <div class="box b5">
 
@@ -159,7 +156,12 @@
 
     </div>
 
-    <button>View Solution</button>
+    <button id="btnSolve">View Solution</button>
+    <button id="btnClear">Clear Board</button>
+
+    <input id="difficulty" type="range" min="17" max="40"></input>
+    <button id="btnGenerate">Generate Puzzle</button>
+
 
 </body>
 

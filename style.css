@@ -43,3 +43,11 @@ body {
     font-size: x-large;
     font-weight: bold;
 }
+
+button {
+    cursor: pointer;
+    text-align: center;
+    background-color: gold;
+    border-radius: 6px;
+    padding: 6px;
+}
