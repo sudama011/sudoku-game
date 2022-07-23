@@ -5,7 +5,7 @@ let btnGenerate = document.getElementById("btnGenerate");
 let difficulty = document.getElementById("difficulty");
 let arr = [[], [], [], [], [], [], [], [], []];
 
-
+// storing the 81 input boxes in the 2-D array.
 (function () {
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
@@ -14,47 +14,77 @@ let arr = [[], [], [], [], [], [], [], [], []];
     }
 })();
 
-function clearSudoku() {
+function fillArray(n = 16) {
+    // clear the Board.
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             arr[i][j].value = '';
-        }
-    }
-}
-
-function fillArray(n = 16) {
-    clearSudoku();
-    let count = 16;
-    while (count > 0) {
-        let i = Math.floor(Math.random() * 9), j = Math.floor(Math.random() * 9)
-        if (arr[i][j].value == '') {
-            let x = "" + Math.floor(1 + Math.random() * 9);
-            if (canPlace(arr, i, j, x)) {
-                arr[i][j].value = x;
-                count--;
-            }
+            arr[i][j].disabled = false;
         }
     }
 
-    if (n >= 81) n = 81;
-    if (n >= 17) {
-        solveSudoku(arr, 0, 0);
-        n = 81 - n;
-        while (n > 0) {
-            let i = Math.floor(Math.random() * 9), j = Math.floor(Math.random() * 9)
-            if (arr[i][j].value != '') {
-                arr[i][j].value = '';
-                n--;
+    // fill 5 random places with random values.
+    let count = 1;
+    while (count <= 5) {
+        let tobeFilled = 1 + Math.floor(Math.random() * (81 - count));
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                if (arr[i][j].value == '') {
+                    tobeFilled--;
+
+                    if (tobeFilled == 0) {
+                        let x = 1;
+                        while (x <= 9) {
+                            if (canPlace(arr, i, j, x + '')) {
+                                arr[i][j].value = x + '';
+                                count++;
+                                break;
+                            }
+                            x++;
+                        }
+                        break;
+                    }
+                }
+            }
+            if (tobeFilled == 0)
+                break;
+        }
+    }
+
+    // solve the puzzle and erase some elements so that filled elements equal to n.
+    solveSudoku();
+
+    n = 81 - n;
+    let erased = 0;
+    while (erased < n) {
+        let tobeDelete = 1 + Math.floor(Math.random() * (81 - erased));
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                if (arr[i][j].value !== '') {
+                    tobeDelete--;
+                    if (tobeDelete === 0) {
+                        arr[i][j].value = '';
+                        erased++;
+                        break;
+                    }
+                }
+            }
+            if (tobeDelete === 0) {
+                break;
             }
         }
     }
-    for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            if (arr[i][j].value !== '') {
-                arr[i][j].disabled = true;
+
+    // disable the filled input fields.
+    setTimeout(function () {
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                if (arr[i][j].value !== '') {
+                    arr[i][j].disabled = true;
+                }
             }
         }
-    }
+    }, 10);
 }
 
 function canPlace(b, i, j, n) {
@@ -95,15 +125,21 @@ function solveSudoku(b = arr, i = 0, j = 0) {
 }
 
 btnClear.addEventListener("click", () => {
-    return clearSudoku();
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (arr[i][j].disabled == false)
+                arr[i][j].value = '';
+        }
+    }
 })
+
+// generate the puzzle on refreshing or opening the website.
+$(document).ready(fillArray(81 - Number(difficulty.value)));
 
 btnSolve.addEventListener("click", () => {
     return solveSudoku();
 });
 
-// $(document).ready(fillArray);
-
 btnGenerate.addEventListener("click", () => {
-    return fillArray(Number(difficulty.value));
+    return fillArray(81 - Number(difficulty.value));
 });

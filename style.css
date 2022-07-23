@@ -5,6 +5,15 @@
 body {
     background-color: rgb(117, 117, 217);
     margin: 5;
+    text-align: center;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 255);
+}
+
+h2 {
+    color: rgb(33, 19, 88);
 }
 
 .grid {
@@ -13,7 +22,7 @@ body {
     border: 2px solid;
     border-color: blue;
     max-width: 500px;
-    margin: auto;
+    /* margin: auto; */
     background-color: rgb(102, 163, 145);
     padding: 0px;
     aspect-ratio: 1 / 1;
@@ -31,7 +40,6 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 2.5px;
     margin: 5px;
-    width: fit-content;
 }
 
 .box>input {
@@ -50,4 +58,40 @@ button {
     background-color: gold;
     border-radius: 6px;
     padding: 6px;
+    margin: 10%;
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+}
+
+.buttons {
+    display: grid;
+    grid-gap:5px;
+    grid-template-rows: .5fr repeat(3,1fr);
+}
+#difficulty{
+    cursor: pointer;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        margin: 3px;
+    }
+    button{
+        margin: 0;
+    }
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0.5fr 1fr;
+    }
+    #difficulty{
+        grid-column-end: span 3;
+    }
 }
