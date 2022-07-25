@@ -19,7 +19,7 @@ Its better to sudoku game
 
 # Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a JavaScript application.
 
 To get a local copy up and running follow these simple steps
 
