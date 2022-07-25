@@ -71,33 +71,38 @@ button {
 
 .buttons {
     display: grid;
-    grid-gap:5px;
-    grid-template-rows: .5fr repeat(3,1fr);
+    grid-gap: 5px;
+    grid-template-rows: .5fr repeat(3, 1fr);
 }
-#difficulty{
+
+#difficulty {
     cursor: pointer;
     margin-left: 10px;
 }
+
 @media only screen and (max-width: 600px) {
     .container {
         flex-direction: column;
         margin: 3px;
     }
-    button{
+
+    button {
         margin: 0;
     }
-    .buttons{
+
+    .buttons {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 0.5fr 1fr;
     }
-    #difficulty{
+
+    #difficulty {
         grid-column-end: span 3;
     }
 }
 
-.alert {
+/* .alert {
     padding: 20px;
     background-color: green;
     color: white;
-}
+} */
