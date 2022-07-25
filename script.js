@@ -19,7 +19,6 @@ function fillArray(n = 16) {
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             arr[i][j].value = '';
-            arr[i][j].disabled = false;
         }
     }
 
@@ -79,8 +78,13 @@ function fillArray(n = 16) {
     setTimeout(function () {
         for (let i = 0; i < 9; i++) {
             for (let j = 0; j < 9; j++) {
-                if (arr[i][j].value !== '') {
+                if (arr[i][j].value == '') {
+                    arr[i][j].disabled = false;
+                    arr[i][j].style.color = '#00b300';
+                }
+                else {
                     arr[i][j].disabled = true;
+                    arr[i][j].style.color = '#1a1a1a';
                 }
             }
         }
@@ -89,14 +93,14 @@ function fillArray(n = 16) {
 
 function canPlace(b, i, j, n) {
     for (let k = 0; k < 9; k++) {
-        if (b[i][k].value === n || b[k][j].value === n)
+        if ((b[i][k].value === n && k != j) || (b[k][j].value === n && k != i))
             return false;
     }
 
     let p = 3 * Math.floor(i / 3), q = 3 * Math.floor(j / 3);
     for (let k = p; k < p + 3; k++) {
         for (let l = q; l < q + 3; l++) {
-            if (b[k][l].value === n)
+            if (b[k][l].value === n && k != i && l != j)
                 return false;
         }
     }
@@ -137,9 +141,50 @@ btnClear.addEventListener("click", () => {
 $(document).ready(fillArray(81 - Number(difficulty.value)));
 
 btnSolve.addEventListener("click", () => {
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (arr[i][j].disabled == false)
+                arr[i][j].value = '';
+        }
+    }
     return solveSudoku();
 });
 
 btnGenerate.addEventListener("click", () => {
     return fillArray(81 - Number(difficulty.value));
 });
+
+function isSolved() {
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (arr[i][j].value == '' || arr[i][j].style.color == 'red') {
+                return false;
+            }
+        }
+    }
+    alert("Congratulations!\nYou Solved It!\n\nIncrease The Difficulty Level And Try Again.");
+    return true;
+}
+
+function check(currentInput) {
+    
+    console.log(currentInput.value);
+    if (currentInput.value == "") {
+        currentInput.style.color = "#00b300";
+        return;
+    }
+    let flag = false;
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (arr[i][j] == currentInput) {
+                if (canPlace(arr, i, j, currentInput.value) === false) {
+                    currentInput.style.color = "red";
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        if (flag) break;
+    }
+    setTimeout(isSolved, 10);
+}

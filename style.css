@@ -95,3 +95,9 @@ button {
         grid-column-end: span 3;
     }
 }
+
+.alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
