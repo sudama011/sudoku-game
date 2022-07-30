@@ -7,7 +7,7 @@
 # About The Project
  this is sudoku-game
  built for the  project purpose
-
+https://sudoku-game-play.netlify.app/
 **NOTE:**
 
 Its better to sudoku game 
