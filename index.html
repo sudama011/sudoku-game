@@ -9,57 +9,87 @@
     <title>Play - Sudoku</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script async defer src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
     <h1>Welcome to Sudoku</h1>
-     
-    <h2>How to play :-
-        <li>Fill in the numbers 1-9 exactly once in every row, column, and 3x3 region.</li>
+
+    <h2>
+        <details>
+            <summary>How to play :-</summary>
+            <li>Fill in the numbers 1-9 exactly once in every row, column, and 3x3 region.</li>
+        </details>
     </h2>
     <div class="container">
         <div class="grid">
 
             <div class="g1">
                 <div class="box b1">
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b2">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b3">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
             </div>
@@ -68,43 +98,70 @@
 
                 <div class="box b4">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b5">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b6">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
             </div>
@@ -113,53 +170,80 @@
 
                 <div class="box b7">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b8">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
 
                 <div class="box b9">
 
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
-                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
+                    <input type="text" maxlength="1"
+                        oninput="this.value=this.value.replace(/[^1-9]/g,''); check(this);" />
 
                 </div>
             </div>
 
         </div>
         <div class="buttons">
-            <input id="difficulty" type="range" min="22" max="50"></input>
+            <input id="difficulty" type="range" value="22" min="22" max="50"></input>
             <button id="btnGenerate">Generate New Puzzle</button>
-            <button id="btnSolve">View Solution</button>
-            <button id="btnClear">Clear Board</button>
+            <button id="btnSolve" onclick="clearArray();solveSudoku();">View Solution</button>
+            <button id="btnClear" onclick="clearArray();">Clear Board</button>
         </div>
     </div>
 </body>

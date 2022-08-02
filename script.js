@@ -1,6 +1,4 @@
 let box = document.getElementsByClassName("box")
-let btnClear = document.getElementById("btnClear");
-let btnSolve = document.getElementById("btnSolve");
 let btnGenerate = document.getElementById("btnGenerate");
 let difficulty = document.getElementById("difficulty");
 let arr = [[], [], [], [], [], [], [], [], []];
@@ -80,7 +78,7 @@ function fillArray(n = 16) {
             for (let j = 0; j < 9; j++) {
                 if (arr[i][j].value == '') {
                     arr[i][j].disabled = false;
-                    arr[i][j].style.color = '#00b300';
+                    arr[i][j].style.color = '#3333ff';
                 }
                 else {
                     arr[i][j].disabled = true;
@@ -90,6 +88,9 @@ function fillArray(n = 16) {
         }
     }, 10);
 }
+
+// generate the puzzle on refreshing or opening the website.
+$(document).ready(fillArray(81 - Number(difficulty.value)));
 
 function canPlace(b, i, j, n) {
     for (let k = 0; k < 9; k++) {
@@ -128,31 +129,21 @@ function solveSudoku(b = arr, i = 0, j = 0) {
     return solveSudoku(b, i, j + 1)
 }
 
-btnClear.addEventListener("click", () => {
-    for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            if (arr[i][j].disabled == false)
-                arr[i][j].value = '';
-        }
-    }
-})
-
-// generate the puzzle on refreshing or opening the website.
-$(document).ready(fillArray(81 - Number(difficulty.value)));
-
-btnSolve.addEventListener("click", () => {
-    for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-            if (arr[i][j].disabled == false)
-                arr[i][j].value = '';
-        }
-    }
-    return solveSudoku();
-});
 
 btnGenerate.addEventListener("click", () => {
     return fillArray(81 - Number(difficulty.value));
 });
+
+function clearArray() {
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (arr[i][j].disabled == false) {
+                arr[i][j].style.color = '#3333ff';
+                arr[i][j].value = '';
+            }
+        }
+    }
+}
 
 function isSolved() {
     for (let i = 0; i < 9; i++) {
@@ -167,10 +158,9 @@ function isSolved() {
 }
 
 function check(currentInput) {
-    
-    console.log(currentInput.value);
+
     if (currentInput.value == "") {
-        currentInput.style.color = "#00b300";
+        currentInput.style.color = "#3333ff";
         return;
     }
     let flag = false;
