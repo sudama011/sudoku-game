@@ -159,9 +159,25 @@ function isSolved() {
 
 function check(currentInput) {
 
-    if (currentInput.value == "") {
-        currentInput.style.color = "#3333ff";
-        return;
+    if (currentInput.value == "") return;
+
+    let str = currentInput.value;
+    if (str.length == 1) {
+        if (str[0] >= '1' && str[0] <= '9') {
+            currentInput.value = str[0];
+        }
+        else {
+            currentInput.value = '';
+            return;
+        }
+    }
+    else if (str.length == 2) {
+        if (str[1] >= '1' && str[1] <= '9') {
+            currentInput.value = str[1];
+        }
+        else {
+            currentInput.value = str[0];
+        }
     }
     let flag = false;
     for (let i = 0; i < 9; i++) {
@@ -176,5 +192,8 @@ function check(currentInput) {
         }
         if (flag) break;
     }
-    setTimeout(isSolved, 10);
+    if (!flag) {
+        currentInput.style.color = "#3333ff";
+        setTimeout(isSolved, 10);
+    }
 }
