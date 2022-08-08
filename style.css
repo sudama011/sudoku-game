@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(117, 117, 217);
+    background-color: #a6abff;
     margin: 5;
     text-align: center;
     font-family: sans-serif, Arial, Helvetica;
@@ -118,16 +118,17 @@ button:active {
 
 .b1 input,
 .b3 input,
+.b5 input,
 .b7 input,
 .b9 input {
-    background-color: gold;
+    background-color: #9ae8ba;
 }
 
 .b2 input,
 .b4 input,
 .b6 input,
 .b8 input {
-    background-color: cyan;
+    background-color: #aac8eef7;
 }
 
 @media only screen and (max-width: 676px) {
